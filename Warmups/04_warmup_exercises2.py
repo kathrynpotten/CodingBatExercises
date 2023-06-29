@@ -23,3 +23,40 @@ def string_splosion(str):
 	for i in range(len(str)):
 		new_str +=  str[:i+1]
 	return new_str
+
+###Return a count of the number of times
+# a substring of length 2 appears in the
+#  string and as the last 2 characters ###
+
+def last2(str):
+	if len(str) <= 2:
+		count = 0 
+	else: 
+		last = str[-2:]
+		count = -1
+		while len(str) >= 2:
+			if str.find(last) != -1:
+				count +=1
+				str = str[str.find(last)+1:]
+	return count
+
+### Return the number of 9s in an array ###
+
+def array_count9(nums):
+	return nums.count(9)
+
+### Return True if one of first 4 elements is a 9 ###
+
+def array_front9(nums):
+	return nums[:4].count(9) > 0
+
+### Return True if sequence 1,2,3 appears in array ###
+
+def array123(nums):
+	idx1_list = [i for i, e in enumerate(nums) if e == 1]
+	idx2_list = [i for i, e in enumerate(nums) if e == 2]
+	idx3_list = [i for i, e in enumerate(nums) if e == 3]
+	if idx1_list or idx2_list or idx3_list == 0:
+		return False
+
+
