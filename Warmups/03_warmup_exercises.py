@@ -50,3 +50,18 @@ def not_string(str):
 
 def missing_char(str,n):
 	return str[:n] + str[n+1:]
+
+
+### Return a new string where first and last characters have been exchanged ###
+
+def front_back(str):
+	if len(str) <=1:
+		return str
+	return str[-1] + str[1:-1] + str[0]
+
+### Given a string, return a string which is three copies of the first 3 characters ###
+
+def front3(str):
+	if len(str) < 3:
+		return str + str + str
+	return str[:3] + str[:3] + str[:3]
