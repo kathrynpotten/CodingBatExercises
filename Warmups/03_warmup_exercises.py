@@ -12,15 +12,11 @@ def diff21(n):
 ### If talking and hour is before 7 or after 20, return True ###
 
 def parrot_trouble(talking, hour):
-	if talking == True and (hour < 7 or hour > 20):
-		return True
-	else:
-		return False
+	return talking == True and (hour < 7 or hour > 20)
+
 
 ### Given 2 integers, return true if one of them is 10 or their sum is 10 ###
 
 def makes10(a,b):
-	if a == 10 or b == 10 or a+b==10:
-		return True
-	else:
-		return False
+	return a == 10 or b == 10 or a+b==10
+
