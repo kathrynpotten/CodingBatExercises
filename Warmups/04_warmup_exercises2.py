@@ -53,15 +53,11 @@ def array_front9(nums):
 ### Return True if sequence 1,2,3 appears in array ###
 
 def array123(nums):
-	if nums.count(1) == 0 or nums.count(2) == 0 or nums.count(3) == 0:
-		return False
-	for i in range(nums.count(1)+1):
-		idx1 = nums.index(1)
-		idx2 = nums.index(2)
-		idx3 = nums.index(3)
-		nums = nums[idx1+1:]
-		if idx2 - idx1 == 1 and idx3 - idx2 == 1:
+	for i in range(len(nums)-2):
+		if nums[i]==1 and nums[i+1]==2 and nums[i+2]==3:
 			return True
+	return False
+
 
 
 	
